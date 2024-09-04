@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}" />
+</head>
+
+<body>
+    {% set url = info.pop() %}
+    <div class="restaurant-container">
+        {% for hotel in info %}
+        {% if loop.index <= 5 %}
+        <div class="restaurant-square hotel-{{ loop.index }}">
+            <!-- <img src="{{ hotel['image_path'] }}" alt="{{ hotel['hotel_name'] }}" class="restaurant-image"> -->
+            <div class="restaurant-info">
+                <div class="restaurant-name">{{ hotel['hotel_name'] }}</div>
+                <div class="restaurant-rating">Rating: {{ hotel['hotel_rating'] }}</div>
+                <div class="restaurant-rating">Distance: {{ hotel['hotel_distance'] }}</div>
+                {% if url != 'zomato' %}
+                    <input type="button" onclick="openUrl()" value="View Details" class="view-details-button">
+                {% else %}
+                    <input type="button" onclick="openUrl('{{ hotel['hotel_url'] }}')" value="View Details" class="view-details-button">
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <script>
+        function openUrl(customUrl) {
+            var finalUrl = customUrl || "{{ url }}";
+            window.location.href = finalUrl;
+        }
+    </script>
+    <div class="review-container">
+        <h2>Leave a Review for the Application:</h2>
+        <form id="application-review-form" class="review-form" action="{{ url_for('submit_review') }}" method="POST">
+            <label for="application-review">Your Review:</label>
+            <textarea id="application-review" name="application-review" rows="4" cols="50"></textarea><br>
+            <label for="application-rating">Rating:</label>
+            <div class="star-rating">
+                <span class="star" data-rating="1">&#9733;</span>
+                <span class="star" data-rating="2">&#9733;</span>
+                <span class="star" data-rating="3">&#9733;</span>
+                <span class="star" data-rating="4">&#9733;</span>
+                <span class="star" data-rating="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="star-rating" name="star-rating">
+            <input type="submit" value="Submit Review">
+        </form>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-rating');
+                document.getElementById('star-rating').value = rating;
+                stars.forEach(s => {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.classList.add('selected');
+                    } else {
+                        s.classList.remove('selected');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

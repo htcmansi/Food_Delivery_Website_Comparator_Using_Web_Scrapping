@@ -1,0 +1,374 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('/Images/search_bg.avif') center/cover no-repeat fixed;
+    background-size: 100% 100%;
+    background-color: transparent;
+    position: relative; /* Add position relative to make sure the ::before pseudo-element is positioned correctly */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/Images/search_bg.avif') center/cover no-repeat fixed; /* Use the same background image */
+    filter: blur(10px); /* Apply blur effect */
+    opacity: 0.8;
+    z-index: -1;
+}
+#navbarDropdown.nav-link {
+    color: white !important;
+}
+.compare-item .nav-link {
+    color: white !important;
+}
+.navbar-brand {
+    color: white !important;
+}
+header {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding: 15px 0;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: url('Images/burger_background.jpg') center/cover no-repeat fixed; /* Use the same background image */
+    filter: blur(10px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+
+.content h1 {
+    color: #FFFFF0;
+    font-size: 35px;
+    margin-left: 50px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto; 
+    margin-right: 10px; 
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #0c7a1b, #5cec46); /* Gradient color combination */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        background: linear-gradient(to right, #3498db, #e74c3c); /* Gradient color combination */
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+
+.navbar {
+    background-color: transparent; /* Change the background color to transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav.navbar {
+    background-color: transparent !important; /* Use !important to increase specificity */
+}
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000; /* Match the text color */
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar-toggler {
+    border: none; /* Remove border */
+}
+
+.navbar-toggler-icon {
+    background-image: url('Images/navbar-toggler-icon.svg'); /* Replace with your own icon */
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-right: 15px; /* Adjust spacing */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #0f0f0f; /* Match the text color */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.nav-link:hover {
+    color: green; /* Match the hover color */
+}
+
+.nav-item.compare-item {
+    margin-right:0lvh; /* Reduce the space */
+}
+
+.signup-btn {
+    background-color: green; /* Match the button background color */
+    color: #fff; /* Match the button text color */
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.nav-item.dropdown {
+    margin-right: 15px; /* Adjust spacing */
+}
+.nav-link dropdown-toggle{
+    color: #fff;
+}
+.nav-link dropdown-toggle:hover{
+    background-color: #0c7a1b;
+}
+
+.signup-btn:hover {
+    background-color: black; /* Match the hover background color */
+    color: #fff; /* Match the hover text color */
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    color: green; /* Match the icon color */
+    cursor: pointer;
+}
+
+/* Move the cart icon closer to the login/register button */
+.cart {
+    margin-right: 10px;
+}
+.signup-btn:hover {
+    background-color: black; 
+    color: #fff;
+}
+
+
+.zomatovsswiggy {
+    position: relative;
+    margin-top: 20px; 
+}
+
+.zomatovsswiggy img {
+    width: 30%; 
+    border-radius: 8px; 
+}
+
+.slogan {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 30%;
+}
+
+.slogan-text {
+    font-size: 40px; 
+    color: rgb(17, 53, 20); 
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .slogan {
+        max-width: 90%;
+        left: 5%;
+    }
+
+    .slogan-text {
+        font-size: 16px; 
+    }
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container .search-icon {
+    margin-right: -30px; 
+}
+
+.cart-login-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Move the container to the right */
+}
+
+.cart-login-container .cart {
+    margin-right: 10px; 
+}
+
+.compare-text {
+    color: #fff;
+    font-size: 40px;
+    margin-left: 70px; 
+    margin-top: 120px;
+} 
+.register-button-container {
+    margin-top: 30px; 
+    margin-left: 175px;
+}
+
+.register-btn {
+    background-color: green; 
+    color: #fff;
+    padding: 10px 20px; 
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color:black; 
+}
+
+.cuisine-selection {
+    margin-bottom: 10px; /* Reduce the margin-bottom */
+}
+.city-box {
+    border: 2px solid #ccc;
+    padding: 20px; 
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    text-align: center;
+    width: 400px;
+    margin-top: -150px;
+    margin-left: 50rem;
+    height: 450px;
+}
+.autocomplete {
+    margin-bottom: 10px;
+}
+
+.city-input, .cuisine-input {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+.cuisine-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+.city-title, .food-type-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Reduce the margin between the labels */
+    color: black;
+}
+.city-dropdown {
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%; 
+}
+
+.find-now-btn {
+    margin-top: 20px; 
+    background-color: green; 
+    color: #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none; 
+}
+
+.find-now-btn:hover {
+    background-color: black; 
+}
+.food-type-dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+.food-type-dropdown option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 500px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+.navbar-nav .nav-item .home-link {
+    color: white;
+}
+
+.navbar-nav .nav-item .home-link:hover {
+    color: lightgray; /* Optional: Change color on hover */
+}
+/* Specific style for the Home nav item */
+.navbar-nav .nav-item .home-link {
+    color: white !important; /* Set the text color to white */
+}
+
+.navbar-nav .nav-item .home-link:hover {
+    color: lightgray !important; /* Optional: Change color on hover */
+}

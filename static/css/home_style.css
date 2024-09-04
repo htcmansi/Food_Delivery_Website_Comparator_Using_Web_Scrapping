@@ -1,0 +1,442 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('/Images/search_bg.avif') center/cover no-repeat fixed;
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding: 15px 0;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: url('Images/burger_background.jpg') center/cover no-repeat fixed; /* Use the same background image */
+    filter: blur(10px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+
+.content h1 {
+    color: #FFFFF0;
+    font-size: 35px;
+    margin-left: 50px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto; 
+    margin-right: 10px; 
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #0c7a1b, #5cec46); /* Gradient color combination */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        background: linear-gradient(to right, #3498db, #e74c3c); /* Gradient color combination */
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    font-weight: bold;
+}
+.nav-link:hover,
+.signup-btn:hover {
+    color: green; 
+}
+
+.signup-btn:hover {
+    background-color:green; 
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .nav-link:hover,
+    .signup-btn:hover {
+        color: green; 
+    }
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9; 
+    box-shadow: 0px 8px 16px 0px rgba(233, 227, 227, 0); 
+    z-index: 1;
+}
+
+.dropdown.show-dropdown .dropdown-content {
+    display: block;
+}
+
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.signup-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    margin: 10% auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search-icon {
+    width: 24px; 
+    height: 24px;
+    cursor: pointer;
+}
+
+.cart-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cart-icon {
+    width: 24px; 
+    height: 24px;
+    cursor: pointer;
+}
+.search-icon {
+    margin-right: 10px;
+}
+
+.nav-links {
+    margin-left: auto;
+}
+
+/* Move the "Sign Up" button to the right corner */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.signup-btn {
+    background-color:green; 
+    color: #fff;
+    padding: 8px 16px; 
+    text-decoration: none;
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+    cursor: pointer;
+}
+.cart {
+    margin-left: 20px; 
+}
+.signup-btn:hover {
+    background-color: black; 
+    color: #fff;
+}
+
+
+.zomatovsswiggy {
+    position: relative;
+    margin-top: 20px; 
+}
+
+.zomatovsswiggy img {
+    width: 30%; 
+    border-radius: 8px; 
+}
+
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container .search-icon {
+    margin-right: -30px; 
+}
+
+.cart-login-container {
+    display: flex;
+    align-items: center;
+}
+
+.cart-login-container .cart {
+    margin-right: 10px; 
+}
+
+.compare-text {
+    color: #fff;
+    font-size: 40px;
+    margin-left: 70px; 
+    margin-top: 120px;
+} 
+.register-button-container {
+    margin-top: 30px; 
+    margin-left: 175px;
+}
+
+.register-btn {
+    background-color: green; 
+    color: #fff;
+    padding: 10px 20px; 
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color:black; 
+}
+
+.cuisine-selection {
+    margin-bottom: 10px; /* Reduce the margin-bottom */
+}
+.city-box {
+    border: 2px solid #ccc;
+    padding: 20px; 
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    text-align: center;
+    width: 400px;
+    margin-top: -150px;
+    margin-left: 50rem;
+    height: 450px;
+}
+.autocomplete {
+    margin-bottom: 10px;
+}
+
+.city-input, .cuisine-input {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+.cuisine-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+.city-title, .food-type-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Reduce the margin between the labels */
+    color: black;
+}
+.city-dropdown {
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%; 
+}
+
+.find-now-btn {
+    margin-top: 20px; 
+    background-color: green; 
+    color: #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none; 
+}
+
+.find-now-btn:hover {
+    background-color: black; 
+}
+.food-type-dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Optional: Style for dropdown options */
+.food-type-dropdown option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+.slogan {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.slogan h1 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .slogan h1 {
+        font-size: 24px;
+        padding: 5px 10px;
+    }
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 200px; /* Add more space above the footer */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
+        padding: 0 20px;
+    }
+}

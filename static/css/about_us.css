@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('/Images/burger_background.jpg') center/cover no-repeat fixed;
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #0c7a1b, #5cec46);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: green;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.intro, .team, .mission {
+    margin-bottom: 30px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.team-info h3 {
+    margin: 0;
+}
+
+.linkedin-logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0 0 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.nav-link:hover,
+.signup-btn:hover {
+    color: green; 
+}
+
+.signup-btn:hover {
+    background-color:green; 
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .nav-link:hover,
+    .signup-btn:hover {
+        color: green; 
+    }
+}
+.signup-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.signup-btn {
+    background-color:green; 
+    color: #fff;
+    padding: 8px 16px; 
+    text-decoration: none;
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+    cursor: pointer;
+}
+.cart {
+    margin-left: 20px; 
+}
+.signup-btn:hover {
+    background-color: black; 
+}
