@@ -1,4 +1,4 @@
-echo "# Food Delivery Website Comparator Using Web Scrapping
+### Food Delivery Website Comparator Using Web Scrapping
 
 This project is designed to compare food delivery websites (like Zomato, Swiggy) using web scraping techniques. It extracts data from these platforms in real time and compares the restaurants based on user-defined parameters such as location, cuisine, and rating.
 
