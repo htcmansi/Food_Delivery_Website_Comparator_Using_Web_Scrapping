@@ -16,38 +16,7 @@ This project is designed to compare food delivery websites (like Zomato, Swiggy)
 - **Requests**: To make HTTP requests and retrieve web pages.
 - **Flask**: For creating the web application to display results dynamically.
 - **HTML, CSS, JavaScript**: For building the frontend user interface.
-
-## Installation
-
-1. Clone the repository:
-   \`\`\`bash
-   git clone https://github.com/htcmansi/Food_Delivery_Website_Comparator_Using_Web_Scrapping.git
-   \`\`\`
-2. Navigate into the project directory:
-   \`\`\`bash
-   cd Food_Delivery_Website_Comparator_Using_Web_Scrapping
-   \`\`\`
-3. Install the required dependencies:
-   \`\`\`bash
-   pip install -r requirements.txt
-   \`\`\`
-
-## Usage
-
-1. Start the Flask server:
-   \`\`\`bash
-   python app.py
-   \`\`\`
-2. Open a web browser and go to:
-   \`\`\`
-   http://127.0.0.1:5000/
-   \`\`\`
-3. Use the interface to enter your location and preferred cuisine, then view the top 5 restaurants listed.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
+- 
 ## Contact
 
 For any questions or suggestions, feel free to reach out to [Mansi Raut](mailto:mansiraut631@gmail.com).
